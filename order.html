@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>Kapllani-Auto</title>
+		<style type="text/css">
+
+			label{
+				color:#620000;
+				font-weight: bold;
+
+			}
+			
+			.colori{
+				color:#620000;
+				font-weight: bold;
+
+			}
+
+			fieldset{
+				size: 180px;
+				width: 10px; 
+				border-radius: 15px; 
+				background-color: #444444;
+				margin-left: 660;
+				position: absolute;
+				top: 135px;
+				opacity: .9;
+			}
+
+			body{
+				background-attachment: fixed; 
+				background-size: 1550px;
+			}
+
+			.colori:hover{
+				background-color: #000000;
+
+			}
+
+		</style>
+	</head>
+
+<body background="foto/logo.jpg">
+	<fieldset>
+		<form action="orderComplete.html">
+		<label>First Name<br><input type = "text" name="fname" style="border-radius: 10px;" required></label><br><br>
+		<label>Last Name<br><input type = "text" name="lname" style="border-radius: 10px;" required></label><br><br>
+		<label>Email:<br><input type = "email" name="email" placeholder="info@example.com" style="border-radius: 10px;"required></label><br><br>
+		<label>Credit Card<br><input type ="Password" name="password" style="border-radius: 10px;"required ></label><br><br>
+		<label>Expire date<br><input type ="date" name="dateOfExpiry" style="border-radius: 10px;"required ></label><br><br>
+		<label>CVV<br><input type ="Password" name="CVV" style="border-radius: 10px;"required ></label><br><br>
+	    <button  style="border-radius: 15px;" class="colori">Order</button><input type="reset" name="reset" style="border-radius: 15px; align-content: center; margin-left: 65px" class="colori"> 
+	    
+	</form>
+	</fieldset>
+</body>
+</html>

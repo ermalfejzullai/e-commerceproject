@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <title>2023 Range Rover Sport</title>
+    <style type="text/css">
+      
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #444444;
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+    li a:hover {
+    background-color: #620000;
+    } 
+
+      .slider{
+        position: relative;
+        width: 900px;
+        margin: left;
+        overflow: hidden;
+      }
+
+      .slider img{
+        width: 100%;
+        display: none;
+      }
+
+      img.displaySlide{
+        display: block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .slider button{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        font-size: 25px;
+        background-color: black;
+        opacity: .5;
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px 15px;
+      }
+
+      .prev{
+        left: 0;
+      }
+      .next{
+        right: 0;
+      }
+
+      @keyframes fade{
+        from{opacity: .5}
+        to{opacity: 1}
+      }
+
+      body{
+        background-color: #620000;
+      }
+
+      p{
+        position: absolute;
+        top: 200px;
+        right: 130px;
+        font-family: sans-serif;
+        color: #444444;
+        font-size: 18;
+        background-color: white;
+        border-radius: 5px;
+        width: 350px;
+      }
+      .description{
+        font-weight: bolder;
+        font-size: 20;
+        color: #620000;
+      }
+
+      .characteristics{
+        position: absolute;
+        left: 240px;
+      }
+    
+
+      .logo{
+        width: 500px;
+        position: absolute;
+        top: 54px;
+        right: 50px;
+        border-radius: 5px;
+      }
+
+      .butoniOrder{
+        color:#620000;
+        font-weight: bold;
+        position: relative;
+        left: 80px;
+        width: 200px;
+        height: 30px;
+
+      }
+      .butoniOrder:hover{
+        background-color: #620000;
+        color: white;
+      }
+
+      .carInfo{
+        position: absolute;
+        top: 720px;
+        left: 10px;
+        background-color: white;
+        color: #444444;
+        border-radius: 5px;
+        width: 900px;
+      }
+
+
+    </style>
+
+    <script type="text/javascript">
+      let slides = [];
+      let slideIndex = 0;
+      let intervalId = null;
+
+      document.addEventListener("DOMContentLoaded", initializeSlider);
+
+      function initializeSlider(){
+        slides = document.querySelectorAll(".slides img");
+        if(slides.length > 0){
+          slides[slideIndex].classList.add("displaySlide");
+          intervalId = setInterval(nextSlide, 5000);
+        }
+      }
+
+      function showSlide(index){
+
+        if(index >= slides.length){
+          slideIndex = 0;
+        }
+        else if(index < 0){
+          slideIndex = slides.length - 1;
+        }
+        
+        slides.forEach(slide =>{
+          slide.classList.remove("displaySlide");
+        });
+
+        slides[slideIndex].classList.add("displaySlide");
+
+      }
+
+      function prevSlide(){
+        clearInterval(intervalId);
+        slideIndex--;
+        showSlide(slideIndex);
+      }
+
+      function nextSlide(){
+        slideIndex++;
+        showSlide(slideIndex);
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <ul>
+  <li><a href="main.html">Home</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+  <li><a href="form.html">Log Out</a></li>
+</ul>
+
+    <div class="slider">
+      <div class="slides">
+        <img class="slide" src="C:\Users\User\Desktop\MyPortfolio\E-Commerce\foto\BenzB1\BenzB1.jpg">
+        <img class="slide" src="C:\Users\User\Desktop\MyPortfolio\E-Commerce\foto\BenzB1\BenzB2.webp">
+        <img class="slide" src="C:\Users\User\Desktop\MyPortfolio\E-Commerce\foto\BenzB1\BenzB3.webp">  
+        <img class="slide" src="C:\Users\User\Desktop\MyPortfolio\E-Commerce\foto\BenzB1\BenzB4.webp">
+        <img class="slide" src="C:\Users\User\Desktop\MyPortfolio\E-Commerce\foto\BenzB1\BenzB5.webp">
+         
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+<img class="logo" src="foto/logo2.jpg">    
+
+
+<p><br><span style="font-size: 26;"> 2018 Mercedes Benz S350d </span><br><br>
+<span class="description">TYPE:</span><span class="characteristics"> Sedan</span><br>
+<span class="description">CONDITION:</span><span class="characteristics"> USED</span><br>
+<span class="description">MILEAGE:</span><span class="characteristics"> 113,000(KM)</span><br>
+<span class="description">TRANSMISSION:</span><span class="characteristics"> AUTOMATIC</span><br>
+<span class="description">YEAR:</span><span class="characteristics"> 2018</span><br>
+<span class="description">COLOR:</span><span class="characteristics"> ICE GRAY</span><br>
+<span class="description">ENGINE:</span><span class="characteristics"> DIESEL</span><br>
+<span class="description">PRICE:</span><span class="characteristics"> €62,000</span><br><br>
+<a href="order.html"><button  style="border-radius: 15px;" class="butoniOrder">Order Now</button></a>
+<br><br>
+ </p>
+
+<p class="carInfo">CAR DETAILS:<br><br>
+  • Transmision Automatik Me 8 Raporte<br>
+• Ndezje/Fikje me Buton Start/Stop<br>
+• ECO Start/Stop<br>
+• Traksion AWD + Terrain Response<br>
+• Suspensione Me Ajer me VeteNivelim<br>
+• Sistem Navigacioni Touch Pro Duo<br>
+• Klimatizator Automatik Me 2 Zona<br>
+• Sistem Audio Mercedes Benz 250W<br>
+• Mbyllje e Dyerve Soft<br>
+• Dritat Full LED me Grafike Daytime LED<br>
+• Sensore Parkimi Perpara dhe Prapa<br>
+• Sistem Audio MeridianTM Sound System<br>
+• Bagazhi Me Hapje Mbyllje Automatike<br>
+• Meridian Sound System<br>
+• Sedile Para/Prap Klimaterike<br>
+• Tavan Panoramik me Hapje<br>
+• Xhama te Erret te Riforcuar<br>
+• Disqe SV Bespoke 22” Style 5131, Satin Black<br>
+• Sistem Surround Camera 360<br>
+• Emergency Brake Assist<br><br> </p>
+
+<iframe style="position: absolute; top: 800px; right: 55px; width: 500px; height: 350px; border-radius: 15px; " src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2994.9845013397403!2d19.520807375532105!3d41.35269059814743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134fd7a47055d8b3%3A0x5627edcb756f7599!2sMektrin%20Motors!5e0!3m2!1sen!2s!4v1716648089098!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+
+  </body>
+</html>
